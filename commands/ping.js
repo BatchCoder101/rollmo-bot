@@ -7,7 +7,7 @@ const talkedRecently = new Set();
                     
                             if (`${client.ping}` <= 50) { 
                             let  goodping = new Discord.RichEmbed()
-                                .setColor("#006400")
+                                .setColor("#228B22")
                                 .addField(`Ping: ${client.ping}`, `Woo! I'm feeling good! :slight_smile:`)
                                     message.channel.send(goodping);
                             }
