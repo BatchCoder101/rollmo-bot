@@ -47,7 +47,7 @@ let toRoll = message.member
         } 
 } 
 
-    }   else
+    } else
      if (all === 'all') {
                                                   let noperms = new Discord.RichEmbed()
                     .setColor("#8b0000")    
