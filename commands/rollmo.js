@@ -55,7 +55,7 @@ let toRoll = message.member
 
 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(noperms);
      
-const rollall = Math.floor((Math.random() * 9999) + 1);
+const rollall = Math.floor(Math.random() * 4000) + 1001;
      
      var withBreaks = "- <@325012890656702465> \n- <@278277143522181121> \n- <@125319130579468288>"
      
