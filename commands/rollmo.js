@@ -69,9 +69,12 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
          
      } else
              if (help === 'help') {
+                 let mentionrollmo = message.guild.roles.find("name", "Rollmo"); 
+                 let mentionprollmo = message.guild.roles.find("name", "Rollmo Premium");
+
                                 let  helpmsg = new Discord.RichEmbed()
                                 .setColor("#04ffff")
-                                .addField(`/rollmo`, `Rolls an amount of money with the required role @Rollmo ($1 - $6666) or @Rollmo Premium ($6666-$9999) .`)  
+                                .addField(`/rollmo`, `Rolls an amount of money with the required role ${mentionrollmo} ($1 - $6666) or ${mentionprollmo} ($6666-$9999) .`)  
                                 .addField(`/rollmo all`, `[ADMINISTRATOR Permission required] Can roll an amount of money ($1000-$5000) for everyone!`) 
                                 message.channel.send(helpmsg);
                             }
