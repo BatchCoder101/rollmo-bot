@@ -63,7 +63,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 .addField(`Who can add your money?`, `- <@325012890656702465>`); 
      
      if (message.member.hasPermission("ADMINISTRATOR")) {
-          message.guild.channels.find("name", "rollmo").sendMessage(x);
+          message.guild.channels.find("name", "rollmo").send(x);
          message.delete();     
  }
          
