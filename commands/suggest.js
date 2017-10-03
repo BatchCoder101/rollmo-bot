@@ -22,5 +22,5 @@ message.guild.channels.find("name", "feedback").send(x);
      
      
 module.exports.help = {
-    name: "feedback"
+    name: "suggest"
 }
