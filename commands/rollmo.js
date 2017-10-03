@@ -12,9 +12,8 @@ const talkedRecently = new Set();
  exports.run = (client, message, args) => {
      let all = args[0]; 
      let nocommand = args[0];
-     
+     let help = args[0];
 
-// Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
 
 
     if (nocommand === undefined) { 
@@ -37,7 +36,7 @@ let toRoll = message.member
      let role = message.guild.roles.find("name", "Rollmo");     
      let prole = message.guild.roles.find("name", "Rollmo Premium");
      
-         if(message.member.roles.find("name", "Rollmo")) { 
+         if (message.member.roles.find("name", "Rollmo")) { 
             message.channel.send(x);
              toRoll.removeRole(role).catch(console.error);
                         } else {
@@ -46,8 +45,7 @@ let toRoll = message.member
             toRoll.removeRole(prole).catch(console.error);
         } 
 } 
-
-    } else
+    }  else
      if (all === 'all') {
                                                   let noperms = new Discord.RichEmbed()
                     .setColor("#8b0000")    
@@ -62,14 +60,21 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
             let  x = new Discord.RichEmbed()
                                 .setColor("#ff69b4")
                                 .addField(`Rollmo All`, `${message.author} rolled $${rollall} for everyone that is online!`)
-                                .addField(`Who can add your money?`, `- <@325012890656702465>`); //withBreaks
+                                .addField(`Who can add your money?`, `- <@325012890656702465>`); 
      
      if (message.member.hasPermission("ADMINISTRATOR")) {
           message.guild.channels.find("name", "rollmo").sendMessage(x);
          message.delete();     
  }
          
-     }
+     } else
+             if (help === 'help') {
+                                let  helpmsg = new Discord.RichEmbed()
+                                .setColor("#04ffff")
+                                .addField(`/rollmo`, `Rolls an amount of money with the required role @Rollmo ($1 - $6666) or @Rollmo Premium ($6666-$9999) .`)  
+                                .addField(`/rollmo all`, `[ADMINISTRATOR Permission required] Can roll an amount of money ($1000-$5000) for everyone!`) 
+                                message.channel.send(helpmsg);
+                            }
  }
   
              
