@@ -13,6 +13,9 @@ const talkedRecently = new Set();
      let all = args[0]; 
      let nocommand = args[0];
      let help = args[0];
+    let feedback = args[0];
+   let suggest = args[0];
+   
 
 
 
@@ -77,7 +80,19 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 .addField(`/rollmo`, `Rolls an amount of money with the required role ${mentionrollmo} ($1 - $6666) or ${mentionprollmo} ($6666-$9999) .`)  
                                 .addField(`/rollmo all`, `[ADMINISTRATOR Permission required] Can roll an amount of money ($1000-$5000) for everyone!`) 
                                 message.channel.send(helpmsg);
-                            }
+                            } else 
+                              if (feedback === 'feedback') {
+                                 let fbmessage = args[0];        
+         let x = new Discord.RichEmbed()
+        .setColor("#0e0d0d")    
+        .addField(`${message.author.username}`, `${suggest}`);
+message.guild.channels.find("name", "feedback").send(x);
+     message.delete();
+     let y = new Discord.RichEmbed()
+        .setColor("#6ceb3b")    
+        .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>!`);
+     message.channel.send(y);
+                              }
  }
   
              
