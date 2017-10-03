@@ -12,7 +12,7 @@ message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
         .setColor("#6ceb3b")    
-        .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>`);
+        .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>!`);
      message.channel.send(y);
      
                         } 
