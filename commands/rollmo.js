@@ -14,13 +14,7 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
-     let fbmessage = args[1];
-
-function foo() {
-  var args = [];
-  for (var i = 0; i < arguments.length; ++i) args[i] = arguments[i];
-  // ...
-}
+     let fbmessage = args[];
 
     if (nocommand === undefined) { 
 const rolled = Math.floor((Math.random() * 6666) + 1);
