@@ -14,8 +14,6 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
     let feedback = args[0];
-   let suggest = args[1++1];
-
 
 
     if (nocommand === undefined) { 
