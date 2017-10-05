@@ -14,7 +14,7 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
-     let fbmessage = args[1];
+     let fbmessage = args[-1];
 
 
     if (nocommand === undefined) { 
@@ -61,7 +61,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
             let  x = new Discord.RichEmbed()
                                 .setColor("#ff69b4")
                                 .addField(`Rollmo All`, `${message.author} rolled $${rollall} for everyone that is online!`)
-                                .addField(`Who can add your money?`, `- ${fbmessage}`); 
+                                .addField(`Who can add your money?`, `- ${message.author}`); 
      
      if (message.member.hasPermission("ADMINISTRATOR")) {
           message.guild.channels.find("name", "rollmo").send(x);
@@ -82,7 +82,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
               if (feedback === 'feedback') {  
                     let x = new Discord.RichEmbed()
                          .setColor("#0e0d0d")    
-                         .addField(`${message.author.username}`, `${message.content[1]}`);
+                         .addField(`${message.author.username}`, `${fbmessage}`);
      message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
