@@ -14,6 +14,7 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
+     let fbmessage = args[1];
 
 
     if (nocommand === undefined) { 
@@ -79,7 +80,6 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 message.channel.send(helpmsg);
                             } else 
               if (feedback === 'feedback') {  
-                let fbmessage = args[1];
                     let x = new Discord.RichEmbed()
                          .setColor("#0e0d0d")    
                          .addField(`${message.author.username}`, `${fbmessage}`);
