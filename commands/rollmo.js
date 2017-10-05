@@ -17,7 +17,10 @@ const talkedRecently = new Set();
    let i = 1;
    let suggest = args[1++i];
    
-
+function manyArgs() {
+  for (var i = 0; i < arguments.length; ++i)
+    alert(arguments[i]);
+};
 
 
     if (nocommand === undefined) { 
@@ -85,7 +88,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                               if (feedback === 'feedback') {  
          let x = new Discord.RichEmbed()
         .setColor("#0e0d0d")    
-        .addField(`${message.author.username}`, `${suggest}`);
+        .addField(`${message.author.username}`, `${manyArgs()}`);
 message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
