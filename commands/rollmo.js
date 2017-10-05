@@ -14,7 +14,7 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
-     let fbmessage = args[1];
+     let fbmessage = [...arguments];
 
 
     if (nocommand === undefined) { 
