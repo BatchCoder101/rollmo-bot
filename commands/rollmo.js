@@ -79,9 +79,10 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 message.channel.send(helpmsg);
                             } else 
               if (feedback === 'feedback') {  
+                let fbmessage = args[0];
                     let x = new Discord.RichEmbed()
                          .setColor("#0e0d0d")    
-                         .addField(`${message.author.username}`, `${message.author.content}`);
+                         .addField(`${message.author.username}`, `${fbmessage}`);
      message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
