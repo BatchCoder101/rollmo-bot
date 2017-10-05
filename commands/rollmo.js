@@ -85,7 +85,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                  let fbmessage = args[0];        
          let x = new Discord.RichEmbed()
         .setColor("#0e0d0d")    
-        .addField(`${message.author.username}`, `${suggest}`);
+        .addField(`${message.author.username}`, `${fbmessage}`);
 message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
