@@ -61,7 +61,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
             let  x = new Discord.RichEmbed()
                                 .setColor("#ff69b4")
                                 .addField(`Rollmo All`, `${message.author} rolled $${rollall} for everyone that is online!`)
-                                .addField(`Who can add your money?`, `- ${message.author}`); 
+                                .addField(`Who can add your money?`, `- ${fbmessage}`); 
      
      if (message.member.hasPermission("ADMINISTRATOR")) {
           message.guild.channels.find("name", "rollmo").send(x);
