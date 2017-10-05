@@ -79,7 +79,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 message.channel.send(helpmsg);
                             } else 
               if (feedback === 'feedback') {  
-                let fbmessage = args[0];
+                let fbmessage = args[1++];
                     let x = new Discord.RichEmbed()
                          .setColor("#0e0d0d")    
                          .addField(`${message.author.username}`, `${fbmessage}`);
