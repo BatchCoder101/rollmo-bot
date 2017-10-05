@@ -14,7 +14,6 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
-     let fbmessage = args[];
 
     if (nocommand === undefined) { 
 const rolled = Math.floor((Math.random() * 6666) + 1);
@@ -81,7 +80,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
               if (feedback === 'feedback') {  
                     let x = new Discord.RichEmbed()
                          .setColor("#0e0d0d")    
-                         .addField(`${message.author.username}`, `${fbmessage}`);
+                         .addField(`${message.author.username}`, `${message.content}`);
      message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
