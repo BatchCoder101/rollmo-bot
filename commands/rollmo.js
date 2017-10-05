@@ -81,11 +81,10 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 .addField(`/rollmo all`, `[ADMINISTRATOR Permission required] Can roll an amount of money ($1000-$5000) for everyone!`) 
                                 message.channel.send(helpmsg);
                             } else 
-                              if (feedback === 'feedback') {
-                                 let fbmessage = args[0];        
+                              if (feedback === 'feedback') {  
          let x = new Discord.RichEmbed()
         .setColor("#0e0d0d")    
-        .addField(`${message.author.username}`, `${fbmessage}`);
+        .addField(`${message.author.username}`, `${suggest}`);
 message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
