@@ -98,6 +98,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
 
 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(noperms);
                 
+                
                 if (message.member.hasPermission("ADMINISTRATOR")) {
                 let update = args.slice(2).join(' ');
                        let noverison = new Discord.RichEmbed()
