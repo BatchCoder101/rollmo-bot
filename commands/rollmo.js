@@ -132,20 +132,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                     .addField(`Changelog ${verison}`, `Changelog ${verison} has been released in ${sentupdates}!`)
                                           message.guild.channels.find("name", "general").send(sentgeneral);
             } 
-                } else
-                    if (count === 'count') {
-                       // let fbmessage = args.slice(1).join(' ');
-                        let fbmessage2 = args.slice(1)
-                        //let transfer = fbmessage.length-1;
-                        let transfer2 = fbmessage2.length;
-                        message.delete();
-                        message.channel.send(`Word count: ` + Math.round(transfer2));
-                        if (parseInt(transfer2) = 25) return message.channel.send(`You've reached the max of 25 words!`);
-                        if (parseInt(transfer2) > 25) return message.channel.send(`You've reached more than the max of 25 words!`);
-                        //message.channel.send(`Character count: ` + Math.round(transfer));
-                        
-                        
-                    }
+                } 
  } 
   
              
