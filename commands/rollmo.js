@@ -90,7 +90,39 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
         .setColor("#6ceb3b")    
         .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>!`);
      message.channel.send(y);
-                              } 
+                              } else 
+            if (updates === 'updates') {
+            let noperms = new Discord.RichEmbed()
+                    .setColor("#8b0000")    
+                    .addField('Unable To Send Changelog', `You don't have permission!`);
+
+if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(noperms);
+                
+                if (message.member.hasPermission("ADMINISTRATOR")) {
+                let update = args.slice(2).join(' ');
+                       let noverison = new Discord.RichEmbed()
+                    .setColor("#8b0000")    
+                    .addField('Unable To Send Changelog', `You don't put in a verison!`);
+                    
+                                           let noupdates = new Discord.RichEmbed()
+                    .setColor("#8b0000")    
+                    .addField('Unable To Send Changelog', `You don't put any updates about the changelog!`);
+                    
+                    if (!verison) return message.channel.send(noverison); 
+                    if (!update) return message.channel.send(noupdates);
+                      
+                let changelog = new Discord.RichEmbed()
+                    .setColor("#6ceb3b")    
+                    .addField(`Changelog ${verison}`, `${update}`); 
+                 message.guild.channels.find("name", "rollmoupdates").send(changelog);
+                 message.delete();
+                    let sentupdates = message.guild.channels.find("name", "rollmoupdates");
+                     let sent = new Discord.RichEmbed()
+                    .setColor("#6ceb3b")    
+                    .addField(`Changelog ${verison}`, `Changelog have been sent to ${sentupdates}!`);  
+                    message.channel.send(sent);
+            } 
+                }
  } 
   
              
