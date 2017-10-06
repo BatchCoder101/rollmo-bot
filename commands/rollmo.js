@@ -88,7 +88,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
      message.delete();
      let y = new Discord.RichEmbed()
         .setColor("#6ceb3b")    
-        .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>!`);
+        .addField(`Success!`, `Your feedback has been sent to <@325012890656702465>!`);
      message.channel.send(y);
                               } else 
             if (changelog === 'changelog') {
