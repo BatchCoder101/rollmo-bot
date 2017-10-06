@@ -14,7 +14,7 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
-     let updates = args[0];
+     let changelog = args[0];
      let verison = args[1];
 
     if (nocommand === undefined) { 
@@ -91,7 +91,7 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
         .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>!`);
      message.channel.send(y);
                               } else 
-            if (updates === 'updates') {
+            if (changelog === 'changelog') {
             let noperms = new Discord.RichEmbed()
                     .setColor("#8b0000")    
                     .addField('Unable To Send Changelog', `You don't have permission!`);
@@ -117,11 +117,19 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                     .addField(`Changelog ${verison}`, `${update}`); 
                  message.guild.channels.find("name", "rollmoupdates").send(changelog);
                  message.delete();
+                    
                     let sentupdates = message.guild.channels.find("name", "rollmoupdates");
+                    
                      let sent = new Discord.RichEmbed()
                     .setColor("#6ceb3b")    
                     .addField(`Changelog ${verison}`, `Changelog have been sent to ${sentupdates}!`);  
-                    message.channel.send(sent);
+                    message.guild.channels.find("name", "penguinperms").send(sent);
+                    
+                    let general = message.guild.channels.find("name", "general");
+                                         let sentgeneral = new Discord.RichEmbed()
+                    .setColor("#20B2AA")    
+                    .addField(`Changelog ${verison}`, `Changelog ${verison} has been released in ${sentupdates}!`)
+                                          message.guild.channels.find("name", "general").send(sentgeneral);
             } 
                 }
  } 
