@@ -113,7 +113,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                     if (!update) return message.channel.send(noupdates);
                       
                 let changelog = new Discord.RichEmbed()
-                    .setColor("#6ceb3b")    
+                    .setColor("#20B2AA")    
                     .addField(`Changelog ${verison}`, `${update}`); 
                  message.guild.channels.find("name", "rollmoupdates").send(changelog);
                  message.delete();
