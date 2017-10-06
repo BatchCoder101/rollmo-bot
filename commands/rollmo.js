@@ -14,6 +14,8 @@ const talkedRecently = new Set();
      let nocommand = args[0];
      let help = args[0];
      let feedback = args[0];
+     let updates = args[0];
+     let verison = args[1];
 
     if (nocommand === undefined) { 
 const rolled = Math.floor((Math.random() * 6666) + 1);
@@ -78,17 +80,18 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 message.channel.send(helpmsg);
                             } else 
               if (feedback === 'feedback') {  
+                   let fbmessage = args.slice(1).join(' ');
                     let x = new Discord.RichEmbed()
                          .setColor("#0e0d0d")    
-                         .addField(`${message.author.username}`, `${message.content}`);
+                         .addField(`${message.author.username}`, `${fbmessage}`);
      message.guild.channels.find("name", "feedback").send(x);
      message.delete();
      let y = new Discord.RichEmbed()
         .setColor("#6ceb3b")    
         .addField(`Sucess!`, `Your feedback has been sent to <@325012890656702465>!`);
      message.channel.send(y);
-                              }
- }
+                              } 
+ } 
   
              
      
