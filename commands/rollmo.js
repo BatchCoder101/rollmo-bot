@@ -132,7 +132,21 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                     .addField(`Changelog ${verison}`, `Changelog ${verison} has been released in ${sentupdates}!`)
                                           message.guild.channels.find("name", "general").send(sentgeneral);
             } 
-                } 
+                } else 
+                                       if (count === 'count') {
+                       // let fbmessage = args.slice(1).join(' ');
+                        let fbmessage2 = args.slice(1)
+                        //let transfer = fbmessage.length-1;
+                        let transfer2 = fbmessage2.length;
+                        message.delete();
+                                                               let y = new Discord.RichEmbed()
+                         .setColor("#b76de0")    
+                         .addField(`Word Count`, `Words: ${Math.round(transfer2)}`);
+                                           message.channel.send(y);
+                        //message.channel.send(`Character count: ` + Math.round(transfer));
+                        
+                        
+                    }
  } 
   
              
