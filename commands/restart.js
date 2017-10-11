@@ -16,6 +16,9 @@ message.channel.send(restarting).then(() => {
                 process.exit(restarted)
             })
         })
+client.on("ready", () => {
+    console.log('Bot is ready!');
+    });
                         } 
         
              
