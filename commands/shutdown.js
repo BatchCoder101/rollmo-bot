@@ -8,7 +8,7 @@ const talkedRecently = new Set();
                     .setColor("#20B2AA")    
                     .addField(`Shutdown`, `I've been shutdown due to an update or repair! Please stand by!`)
      
-message.channel.send(update).then(() => {
+message.guild.channels.find("name", "general").send(update).then(() => {
             client.destroy().then(() => {
             })
         })
