@@ -34,6 +34,13 @@ client.on("message", message => {
     if (x2 > 25) return message.channel.send('test');
 });
 
+
+setInterval(function() {
+      message.channel.send('hey!');
+}, 5000);
+
+
+
  
 //Write a code for emojis displaying commands
 
