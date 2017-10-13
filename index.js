@@ -34,11 +34,6 @@ client.on("message", message => {
     if (x2 > 25) return message.channel.send('test');
 });
 
-
-setInterval(function() {
-    let general = message.guild.channels.find("name", "general");
-     message.guild.channels.find("name", "general").send('hey!');
-}, 5000);
 }
 
 
