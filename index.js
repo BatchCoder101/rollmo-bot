@@ -34,8 +34,6 @@ client.on("message", message => {
     if (x2 > 25) return message.channel.send('test');
 });
 
-}
-
 
  
 //Write a code for emojis displaying commands
