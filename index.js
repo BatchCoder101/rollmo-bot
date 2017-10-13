@@ -36,7 +36,8 @@ client.on("message", message => {
 
 
 setInterval(function() {
-      message.channel.send('hey!');
+    let general = message.guild.channels.find("name", "general");
+     message.guild.channels.find("name", "general").send('hey!');
 }, 5000);
 
 
