@@ -79,7 +79,9 @@ const rollall = Math.floor(Math.random() * 4000) + 1001;
                                 let  helpmsg = new Discord.RichEmbed()
                                 .setColor("#04ffff")
                                 .addField(`/rollmo`, `Rolls an amount of money with the required role ${mentionrollmo} ($1 - $6666) or ${mentionprollmo} ($6666-$9999) .`)  
-                                .addField(`/rollmo all`, `[ADMINISTRATOR Permission required] Can roll an amount of money ($1000-$5000) for everyone!`) 
+                                .addField(`/rollmo all`, `[Administrator Permission Required] Can roll an amount of money ($1000-$5000) for everyone!`) 
+                                /chests shutdown
+                                .addField(`/rollmo shutdown`, `[Administrator Permission Required] [Administrator Permission Required] You can shutdown the bot whenever you want if there are bugs or if it needs repairs.`) 
                                 message.channel.send(helpmsg);
                             } else 
               if (feedback === 'feedback') {  
