@@ -17,6 +17,8 @@ const talkedRecently = new Set();
      let changelog = args[0];
      let verison = args[1];
      let count = args[0];
+     let random = args[0];
+     let shutdown = args[0];
 
     if (nocommand === undefined) { 
 const rolled = Math.floor((Math.random() * 6666) + 1);
@@ -145,8 +147,26 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         //message.channel.send(`Character count: ` + Math.round(transfer));
                         
                         
-                    }
- } 
+                    } else
+                        if (random === 'random') {
+                               var bot = new Boolean(false);
+                            if (!bot) {
+ let y = message.guild.members.random().id;
+                                 message.channel.send(`<@${y}>`);
+                             }
+} else 
+    if (shutdown === 'shutdown') {
+                                         let update = new Discord.RichEmbed()
+                    .setColor("#20B2AA")    
+                    .addField(`Shutdown`, `I've been shutdown due to an update or repair! Please stand by!`)
+     
+message.channel.send(update).then(() => {
+            client.destroy().then(() => {
+            })
+        })
+    }
+ }
+                               
   
              
      
