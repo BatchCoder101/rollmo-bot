@@ -144,7 +144,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                                                                let y = new Discord.RichEmbed()
                          .setColor("#b76de0")    
                          .addField(`Word Count`, `Words: ${Math.round(transfer2)}`)
-                         .addFooter(`${message.channel.id}`);
+                         .addField(`${message.id}`);
                                            message.channel.send(y);
                         //message.channel.send(`Character count: ` + Math.round(transfer));
                         
