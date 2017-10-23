@@ -9,7 +9,9 @@ const talkedRecently = new Set();
                             let  goodping = new Discord.RichEmbed()
                                 .setColor("#2ace2a")
                                 .addField(`Ping: ${client.ping}`, `Woo! I'm feeling good! :slight_smile:`)
+                            .addField(`${message.id}`)
                                     message.channel.send(goodping);
+                             
                             }
                             if (`${client.ping}` > 51 && `${client.ping}` < 100) {
                                 let decentping = new Discord.RichEmbed()
