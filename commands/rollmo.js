@@ -143,7 +143,8 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         let transfer2 = fbmessage2.length;
                                                                let y = new Discord.RichEmbed()
                          .setColor("#b76de0")    
-                         .addField(`Word Count`, `Words: ${Math.round(transfer2)}`);
+                         .addField(`Word Count`, `Words: ${Math.round(transfer2)}`)
+                         .addFooter(`${message.channel.id}`);
                                            message.channel.send(y);
                         //message.channel.send(`Character count: ` + Math.round(transfer));
                         
