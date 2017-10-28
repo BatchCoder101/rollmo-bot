@@ -150,11 +150,9 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         
                     } else
                         if (random === 'random') {
-                               var bot = new Boolean(false);
-                            if (!bot) {
- let y = message.guild.members.random().id;
+ let y = message.guild.members.random().id.bot;
                                  message.channel.send(`<@${y}>`);
-                             }
+                             
 } else 
     if (shutdown === 'shutdown') {
                                          let update = new Discord.RichEmbed()
