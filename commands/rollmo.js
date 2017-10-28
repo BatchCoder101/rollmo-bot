@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-const talkedRecently = new Set();
 
                    
 
@@ -150,7 +149,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         
                     } else
                         if (random === 'random') {
- let y = message.guild.members.random().id.bot;
+ let y = message.guild.members.random().bot.id;
                                  message.channel.send(`<@${y}>`);
                              
 } else 
