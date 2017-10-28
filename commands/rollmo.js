@@ -16,7 +16,6 @@ const fs = require("fs");
      let changelog = args[0];
      let verison = args[1];
      let count = args[0];
-     let random = args[0];
      let shutdown = args[0];
 
     if (nocommand === undefined) { 
@@ -147,12 +146,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         //message.channel.send(`Character count: ` + Math.round(transfer));
                         
                         
-                    } else
-                        if (random === 'random') {
- let y = message.guild.members.random().bot.id;
-                                 message.channel.send(`<@${y}>`);
-                             
-} else 
+                    } else 
     if (shutdown === 'shutdown') {
                                          let update = new Discord.RichEmbed()
                     .setColor("#20B2AA")    
