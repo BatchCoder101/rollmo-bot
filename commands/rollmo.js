@@ -148,7 +148,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         
                         
                     } else 
-                      if (random === 'random) {
+                      if (random === 'random') {
                          let x = message.guildmember.user.bot(false).random;
    message.channel.send(x);
                           } else 
