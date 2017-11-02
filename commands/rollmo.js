@@ -17,6 +17,7 @@ const fs = require("fs");
      let verison = args[1];
      let count = args[0];
      let shutdown = args[0];
+   let random = args[0];
 
     if (nocommand === undefined) { 
 const rolled = Math.floor((Math.random() * 6666) + 1);
@@ -147,6 +148,10 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(n
                         
                         
                     } else 
+                      if (random === 'random) {
+                         let x = message.guildmember.user.bot(false).random;
+   message.channel.send(x);
+                          } else 
     if (shutdown === 'shutdown') {
                                          let update = new Discord.RichEmbed()
                     .setColor("#20B2AA")    
